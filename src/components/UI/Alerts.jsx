@@ -1,33 +1,33 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const SuccessClick = () => {
-  toast.success('Exito', {
-    position: 'top-right',
+  toast.success("Exito", {
+    position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'dark',
+    theme: "dark",
   });
 };
 
 export const InfoClick = () => {
-  toast.info('Informacion importante', {
-    position: 'top-right',
+  toast.info("Informacion importante", {
+    position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'dark',
+    theme: "dark",
   });
   return (
     <ToastContainer
-      position='top-right'
+      position="top-right"
       autoClose={5000}
       hideProgressBar={false}
       newestOnTop={false}
@@ -36,25 +36,25 @@ export const InfoClick = () => {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme='dark'
+      theme="dark"
     />
   );
 };
 
 export const WarningClick = () => {
-  toast.warning('Cuidado!', {
-    position: 'top-right',
+  toast.warning("Cuidado!", {
+    position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'dark',
+    theme: "dark",
   });
   return (
     <ToastContainer
-      position='top-right'
+      position="top-right"
       autoClose={5000}
       hideProgressBar={false}
       newestOnTop={false}
@@ -63,25 +63,25 @@ export const WarningClick = () => {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme='dark'
+      theme="dark"
     />
   );
 };
 
-export const ErrorClick = () => {
-  toast.error('Error', {
-    position: 'top-right',
+export const ErrorClick = (value) => {
+  toast.error(value, {
+    position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
-    theme: 'dark',
+    theme: "dark",
   });
   return (
     <ToastContainer
-      position='top-right'
+      position="top-right"
       autoClose={5000}
       hideProgressBar={false}
       newestOnTop={false}
@@ -90,7 +90,7 @@ export const ErrorClick = () => {
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme='dark'
+      theme="dark"
     />
   );
 };

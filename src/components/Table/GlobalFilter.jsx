@@ -17,7 +17,7 @@ export function GlobalFilter({
       <span className="text-gray-200">Buscar: </span>
       <input
         type="text"
-        className="w-36 rounded-md shadow-sm p-1 text-gray-700"
+        className="w-24 md:w-36 rounded-md shadow-sm p-1 bg-neutral-600 text-gray-200"
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);

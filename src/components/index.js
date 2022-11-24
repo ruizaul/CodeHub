@@ -6,3 +6,6 @@ export { Table } from "./Table/Table";
 export { AvatarCell } from "./Table/AvatarCell";
 export { StatusPill } from "./Table/StatusPill";
 export { GlobalFilter } from "./Table/GlobalFilter";
+export { Modal } from "./Modal/Modal";
+export { Form } from "./Form/Form";
+export { TableActionButtons } from "./Table/TableActionButtons";
