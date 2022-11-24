@@ -1,0 +1,166 @@
+
+$sidebar-color: #dbd5d5
+$sidebar-shadow: rgba(95, 94, 94, 0.48)
+$item-background-color: #e4e0e0
+$item-color: #428383
+$item-shadow: #464545
+$item-active-background-color: #428383
+$item-active-color: #FFFFFF
+$item-logout-color: #c73b3b 
+$item-logout-active-background-color: #d3cccc 
+$item-text-background-color: #428383
+$item-text-color: #FFFFFF
+$border-divider-color: rgb(190, 189, 189)
+$transition: all 0.5s ease
+$sidebar-color--dark: #242222
+$border-divider-color--dark: rgb(80, 77, 77)
+
+@mixin nav 
+	position: fixed 
+	top: 0
+	bottom: 0 
+	height: 100% 
+	width: 70px 
+	padding: 10px 5px
+	box-shadow: $sidebar-shadow 0px 0px 3px 0px 
+	background-color: $sidebar-color 
+	transition: $transition
+	
+@mixin bottom_links
+	padding-left: 4px
+	padding-top: 10px 
+	padding-bottom: 10px 
+	margin-bottom: -30px 
+	border-top: 1px solid $border-divider-color
+	border-top-width: 1px
+
+@mixin logo_image
+	display: flex 
+	justify-content: center 
+	min-width: 50px 
+	padding-bottom: 10px 
+	border-bottom: 1px solid $border-divider-color
+
+	img
+		width: 50px 
+		object-fit: cover
+		border-radius: 50% 
+		box-shadow: $item-shadow 2px 2px 2px 0px 
+
+@mixin link_icon
+	padding: 0.5rem
+	margin-bottom: 10px
+	margin-top: 5px 
+	height: 50px 
+	width: 50px 
+	background-color: $item-background-color
+	border-radius: 50% 
+	color: $item-color
+	box-shadow: $item-shadow 0px 0px 3px 0px 
+	transition: border-radius 250ms, color 250ms 
+
+	&:hover 
+		border-radius: 30%
+
+.nav 
+	@include nav
+	
+.logo_image 
+	@include logo_image
+	
+.menu_items 
+	margin-top: 10px 
+	height: calc(100% - 90px) 
+	display: flex 
+	flex-direction: column 
+	justify-content: space-between 
+	
+.nav_links 
+	padding-left: 4px
+
+.bottom_links
+	@include bottom_links
+
+.logout_link 
+	padding: 0.5rem 
+	background-color: $item-background-color
+	border-radius: 50% 
+	color: $item-logout-color
+	box-shadow: $item-shadow 0px 0px 3px 0px 
+	transition: border-radius 250ms, color 250ms 
+
+.link_icon 
+	@include link_icon
+
+.active
+	.link_icon
+		background-color: $item-active-background-color
+		border-radius: 30%
+		color: $item-active-color
+		
+.link_tooltip
+	position: absolute
+	margin-top: 1.5rem
+	margin-left: 4.3rem
+	width: max-content
+	border-radius: 4px
+	background: #242323
+	color: $item-text-color
+	padding: 0.68rem 1rem
+	//transition: opacity 128ms, transform 360ms cubic-bezier(0.43, 0.09, 0.38, 2.56)
+	pointer-events: none
+	//transform-origin: left
+	opacity: 0
+	font-size: 1.5rem
+	transform: translateY(-50%) scale(0.98)
+
+	&::before
+		content: ''
+		position: absolute
+		left: -2px
+		top: 50%
+		transform: translateY(-50%) rotate(45deg)
+		background: #232424
+		width: 24px
+		height: 24px
+		z-index: -1
+	
+a
+	&:hover .link_tooltip
+		opacity: 1
+		margin-left: 4.4rem
+		transform: translateY(-50%) scale(1) 	
+
+.link_toggle
+	margin-left: 1px 
+	margin-bottom: 10px 
+	height: 50px 
+	width: 50px 
+
+.link_profile 
+	margin-left: 1px 
+	margin-bottom: 10px 
+	height: 50px 
+	width: 50px 
+	border-radius: 50% 
+	box-shadow: $item-shadow 0px 0px 3px 0px
+
+.link_logout 
+	@include link_icon
+	color: $item-logout-color 
+
+	&:hover
+		background-color: $item-logout-color 
+		color: $item-logout-active-background-color
+	
+.nav_dark
+	@include nav
+	background-color: $sidebar-color--dark
+	
+.bottom_links_dark
+	@include bottom_links
+	border-top: 1px solid $border-divider-color--dark
+ 
+.logo_image_dark 
+	@include logo_image
+	border-bottom: 1px solid $border-divider-color--dark
