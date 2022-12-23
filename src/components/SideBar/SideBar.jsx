@@ -20,7 +20,7 @@ export const SideBar = ({ isDarkMode, toggleDarkMode }) => {
         <div
           className={`${isDarkMode ? style.logo_image : style.logo_image_dark}`}
         >
-          <img src={logoPic} alt="logopic" title="necobot :3" />
+          <img src={logoPic} alt="logopic" title="CodeHub logo" />
         </div>
         <div className={`${style["menu_items"]}`}>
           <ul className={`${style["nav_links"]}`}>

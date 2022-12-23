@@ -1,9 +1,9 @@
 export const TableActionButtons = ({ data, setShowModal2, showModal2 }) => {
   return (
-    <div className="flex justify-center items-end">
+    <div className="flex justify-start items-center">
       {/*"Editar"*/}
       <button
-        className="z-0 block p-4 text-blue-700 transition-all bg-neutral-700 border-2 border-neutral-600 rounded-full active:bg-blue-50 hover:scale-110 "
+        className="z-0 block p-4 text-green-500 transition-all bg-neutral-700 border-2 border-neutral-600 rounded-full active:bg-blue-50 hover:scale-110 "
         type="button"
         onClick={() => {
           setShowModal2(true);
